@@ -9,7 +9,7 @@ import re
 API_ID = int(os.getenv("API_ID", 28058773))
 API_HASH = os.getenv("API_HASH", "e9e57b0112979b26db98ed965b55ec23")
 BOT_TOKEN = os.getenv("BOT_TOKEN", "7561453887:AAEMHh30AV3MGw0sH9uS6sWyckmtiCc7Ues")
-OWNER_ID = int(os.getenv("OWNER_ID", 908814910)) # يمكنك ضبط المالك في Render
+owner_id = int(os.getenv("owner_id", 908814910)) # يمكنك ضبط المالك في Render
 
 # 🔹 إنشاء عميل Telethon
 client = TelegramClient("bot_session", API_ID, API_HASH)
@@ -18,7 +18,7 @@ client = TelegramClient("bot_session", API_ID, API_HASH)
 admins_file = "admins.txt"
 if not os.path.exists(admins_file):
 with open(admins_file, "w") as f:
-f.write(str(OWNER_ID) + "\n")
+f.write(str(owner_id) + "\n")
 
 def load_admins():
 """ تحميل قائمة المشرفين من الملف """
@@ -86,7 +86,7 @@ await event.respond("🚫 هذا الأمر متاح فقط للمالك.")
 return
 try:
 admin_id = int(message_text.split()[1])
-if admin_id == OWNER_ID:
+if admin_id == owner_id:
 await event.respond("🚫 لا يمكنك إزالة المالك من المشرفين!")
 return
 if admin_id not in admins:
