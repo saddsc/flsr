@@ -6,9 +6,9 @@ import re
 import os
 
 # القيم المحدثة
-api_id = 23564354  # ضع الـ API ID الصحيح هنا
-api_hash = "13789136ae3481e06297cf98904f8a0d"  # ضع الـ API Hash الصحيح هنا
-bot_token = "8177138516:AAEWI5lVwy-RJ6IRwUpOCIBGAxUEub6jTig"  # ضع التوكن الصحيح هنا
+api_id = 28058773  # ضع الـ API ID الصحيح هنا
+api_hash = "e9e57b0112979b26db98ed965b55ec23"  # ضع الـ API Hash الصحيح هنا
+bot_token = "7561453887:AAEMHh30AV3MGw0sH9uS6sWyckmtiCc7Ues"  # ضع التوكن الصحيح هنا
 owner_id = 908814910  # المعرف الخاص بصاحب البوت
 
 # إنشاء عميل Telegram
